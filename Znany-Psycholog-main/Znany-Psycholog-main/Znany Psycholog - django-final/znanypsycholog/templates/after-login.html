@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>PsychoGabinet</title>
+      <!-- Custom CSS (includes Bootstrap 5.0)-->
+      <link href="{% static "css/styles.css" %}" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="container" id="wrapper" style ="width: 100%; max-width:100%">
+         <div class = "row" style ="height: 100%">
+            <!-- Sidebar-->
+            <div class="col-12 col-md-2 sidebar"> 
+                   <img src="{% static "logo.jpg" %}" alt="logo" class="logo"/>
+               <ul>
+                  <button type="button" class="wizyty">Wizyty</button>
+                  <button type="button" class="specjalisci">Specjaliści</button>
+                  <button type="button" class="czat">Czat ze specjalistą</button>
+                  <button type="button" class="info">Moje informacje</button>
+                  <button type="button" class="ustawienia">Ustawienia</button>
+                  <button type="button" class="strona_glowna">Strona Główna</button>
+                  <button type="button" class="wyloguj">Wyloguj się</button>
+               </ul>
+            </div>
+            <!-- Sidebar - end -->
+            <!-- Panel  -->
+            {% block zawartosc %}
+            {% endblock %}
+            <!-- Panel - end  -->
+         </div>
+      </div>
+ 
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- JQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+      <!-- Custom JS-->
+      <script src="js/scripts.js"></script>
+   </body>
+</html>
